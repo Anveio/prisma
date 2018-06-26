@@ -115,7 +115,7 @@ volumes:
 
 </Instruction>
 
-To learn more about the structure of this Docker compose file, check out the [reference documentation](http://localhost:3000/docs/reference/prisma-servers-and-dbs/prisma-servers/docker-aira9zama5#configuration-with-docker-compose).
+To learn more about the structure of this Docker compose file, check out the [reference documentation](https://www.prisma.io/docs/reference/prisma-servers-and-dbs/prisma-servers/docker-aira9zama5/#configuration-with-docker-compose).
 
 <Instruction>
 
@@ -163,7 +163,7 @@ datamodel: datamodel.graphql
 To complete the setup, open `datamodel.graphql` and add the following `User` type to it:
 
 ```graphql
-type User{
+type User {
   id: ID! @unique
   name: String!
 }
@@ -263,9 +263,7 @@ Open a new tab in the Playground, enter the following mutation into the left Pla
 
 ```graphql
 mutation {
-  createUser(data: {
-    name: "Sarah"
-  }) {
+  createUser(data: { name: "Sarah" }) {
     id
   }
 }
@@ -301,9 +299,7 @@ Note that the API also offers powerful filtering, ordering and pagination capabi
 
 ```graphql
 query {
-  users(where: {
-    name_contains: "ra"
-  }) {
+  users(where: { name_contains: "ra" }) {
     id
     name
   }
